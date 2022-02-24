@@ -52,7 +52,6 @@ BuildRequires:  lmdb-devel
 BuildRequires:  automake
 BuildRequires:  libtool
 BuildRequires:  perl-ExtUtils-Embed
-BuildRequires:  libmodsecurity-nginx-devel
 BuildRequires:  gnupg
 BuildRequires:  pam-devel
 
