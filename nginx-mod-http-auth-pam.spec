@@ -140,4 +140,4 @@ make modules %{?_smp_mflags}
 %files
 %{_libdir}/nginx/modules/ngx_http_auth_pam_module.so
 %{_datadir}/nginx/modules/mod-http-auth-pam.conf
-%license ../modsecurity-nginx-v%{version}/LICENSE
+%license ../ngx_http_auth_pam_module-%{version}/LICENSE
