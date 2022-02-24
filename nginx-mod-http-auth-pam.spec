@@ -27,6 +27,7 @@ Source0:        https://github.com/sto/ngx_http_auth_pam_module/archive/refs/tag
 
 Source2:        https://nginx.org/download/nginx-%{fedora_nginx_version}.tar.gz
 Source3:        https://nginx.org/download/nginx-%{fedora_nginx_version}.tar.gz.asc
+Source4:        mod-http-auth-pam.conf
 Source101:      https://nginx.org/keys/is.key
 Source102:      https://nginx.org/keys/maxim.key
 Source103:      https://nginx.org/keys/mdounin.key
