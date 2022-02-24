@@ -43,13 +43,19 @@ BuildRequires:  gcc
 BuildRequires:  openssl-devel
 BuildRequires:  pcre-devel
 BuildRequires:  zlib-devel
-BuildRequires:  pam-devel
-BuildRequires:  libxml2-devel
 BuildRequires:  libxslt-devel
 BuildRequires:  gd-devel
+BuildRequires:  GeoIP-devel
+BuildRequires:  libcurl-devel
+BuildRequires:  yajl-devel
+BuildRequires:  lmdb-devel
 BuildRequires:  automake
 BuildRequires:  libtool
-BuildRequires:  gnupg2
+BuildRequires:  perl-ExtUtils-Embed
+BuildRequires:  libmodsecurity-nginx-devel
+BuildRequires:  gnupg
+BuildRequires:  pam-devel
+
 
 Requires:       nginx >= %{fedora_nginx_version}
 
