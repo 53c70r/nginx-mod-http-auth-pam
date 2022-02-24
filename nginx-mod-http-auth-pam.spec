@@ -45,6 +45,7 @@ BuildRequires:  pcre-devel
 BuildRequires:  zlib-devel
 BuildRequires:  pam-devel
 BuildRequires:  libxml2-devel
+BuildRequires:  libxslt-devel
 BuildRequires:  automake
 BuildRequires:  libtool
 BuildRequires:  gnupg2
