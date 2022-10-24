@@ -2,7 +2,7 @@
 %global nginx_user nginx
 %global debug_package %{nil}
 %global with_aio 1
-%global fedora_nginx_version 1.20.2
+%global fedora_nginx_version 1.22.0
 
 %if 0%{?fedora} > 22
 %global with_mailcap_mimetypes 1
@@ -17,7 +17,7 @@
 
 Name:           nginx-mod-http-auth-pam
 Version:        1.5.3
-Release:        0%{?dist}
+Release:        1%{?dist}
 Summary:        Nginx module to use PAM for simple http authentication
 License:        ASL 2.0
 BuildArch:      x86_64
