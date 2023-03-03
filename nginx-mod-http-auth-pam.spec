@@ -1,5 +1,5 @@
 %global _hardened_build 1
-%global nginx_version @NGINX_VERSION@
+%global nginx_version 1.22.1
 %global nginx_user nginx
 %global debug_package %{nil}
 %global with_aio 1
