@@ -31,6 +31,7 @@ Source101:      https://nginx.org/keys/is.key
 Source102:      https://nginx.org/keys/maxim.key
 Source103:      https://nginx.org/keys/mdounin.key
 Source104:      https://nginx.org/keys/sb.key
+Source105:      https://nginx.org/keys/thresh.key
 
 Patch0:         nginx-auto-cc-gcc.patch
 
@@ -57,7 +58,7 @@ Requires:       nginx = 1:%{nginx_version}
 HTTP Basic Authentication using PAM.
 
 %prep
-cat %{S:101} %{S:102} %{S:103} %{S:104} > %{_builddir}/nginx.gpg
+cat %{S:101} %{S:102} %{S:103} %{S:104} %{S:105} > %{_builddir}/nginx.gpg
 %{gpgverify} --keyring='%{_builddir}/nginx.gpg' --signature='%{SOURCE3}' --data='%{SOURCE2}'
 
 # extract ngx_http_auth_pam_module
