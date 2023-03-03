@@ -49,6 +49,7 @@ BuildRequires:  perl-devel
 BuildRequires:  perl(ExtUtils::Embed)
 BuildRequires:  zlib-devel
 BuildRequires:  pam-devel
+BuildRequires:  gpg
 
 Requires:       nginx = 1:%{nginx_version}
 
