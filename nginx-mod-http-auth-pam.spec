@@ -61,7 +61,7 @@ HTTP Basic Authentication using PAM.
 cat %{S:101} %{S:102} %{S:103} %{S:104} %{S:105} > %{_builddir}/nginx.gpg
 cat %{SOURCE4} > %{_builddir}/mod-http-auth-pam.conf
 %{gpgverify} --keyring='%{_builddir}/nginx.gpg' --signature='%{SOURCE3}' --data='%{SOURCE2}'
-sed -i "s#MODULE_PATH#%{_prefix}/%{_lib}/nginx/modules/ngx_http_auth_pam_module.so#g" %{_builddir}/mod-modsecurity.conf
+sed -i "s#MODULE_PATH#%{_prefix}/%{_lib}/nginx/modules/ngx_http_auth_pam_module.so#g" %{_builddir}/mod-http-auth-pam.conf
 
 # extract ngx_http_auth_pam_module
 %setup -n ngx_http_auth_pam_module-%{version}
@@ -76,7 +76,7 @@ make modules %{?_smp_mflags}
 
 %install
 %{__install} -p -D -m 0755 objs/ngx_http_auth_pam_module.so %{buildroot}%{_libdir}/nginx/modules/ngx_http_auth_pam_module.so
-%{__install} -p -D -m 0644 %{_builddir}/mod-modsecurity.conf %{buildroot}%{_datadir}/nginx/modules/mod-http-auth-pam.conf
+%{__install} -p -D -m 0644 %{_builddir}/mod-http-auth-pam.conf %{buildroot}%{_datadir}/nginx/modules/mod-http-auth-pam.conf
 
 %files
 %{_libdir}/nginx/modules/ngx_http_auth_pam_module.so
