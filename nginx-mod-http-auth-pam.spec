@@ -1,5 +1,5 @@
 %global _hardened_build 1
-%global nginx_version 1.22.1
+%global nginx_version 1.24.0
 %global nginx_user nginx
 %global debug_package %{nil}
 %global with_aio 1
@@ -17,7 +17,7 @@
 
 Name:           nginx-mod-http-auth-pam
 Version:        1.5.3
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Nginx module to use PAM for simple http authentication
 License:        ASL 2.0
 URL:            https://github.com/sto/ngx_http_auth_pam_module
