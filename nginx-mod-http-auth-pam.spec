@@ -27,11 +27,10 @@ Source0:        https://github.com/sto/ngx_http_auth_pam_module/archive/refs/tag
 Source2:        https://nginx.org/download/nginx-%{nginx_version}.tar.gz
 Source3:        https://nginx.org/download/nginx-%{nginx_version}.tar.gz.asc
 Source4:        mod-http-auth-pam.conf
-Source101:      https://nginx.org/keys/is.key
-Source102:      https://nginx.org/keys/maxim.key
-Source103:      https://nginx.org/keys/mdounin.key
+Source101:      https://nginx.org/keys/arut.key
+Source102:      https://nginx.org/keys/pluknet.key
+Source103:      https://nginx.org/keys/thresh.key
 Source104:      https://nginx.org/keys/sb.key
-Source105:      https://nginx.org/keys/thresh.key
 
 Patch0:         nginx-auto-cc-gcc.patch
 
@@ -58,7 +57,7 @@ Requires:       nginx = 1:%{nginx_version}
 HTTP Basic Authentication using PAM.
 
 %prep
-cat %{S:101} %{S:102} %{S:103} %{S:104} %{S:105} > %{_builddir}/nginx.gpg
+cat %{S:101} %{S:102} %{S:103} %{S:104} > %{_builddir}/nginx.gpg
 cat %{SOURCE4} > %{_builddir}/mod-http-auth-pam.conf
 %{gpgverify} --keyring='%{_builddir}/nginx.gpg' --signature='%{SOURCE3}' --data='%{SOURCE2}'
 sed -i "s#MODULE_PATH#%{_prefix}/%{_lib}/nginx/modules/ngx_http_auth_pam_module.so#g" %{_builddir}/mod-http-auth-pam.conf
