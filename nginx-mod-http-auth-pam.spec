@@ -66,7 +66,7 @@ sed -i "s#MODULE_PATH#%{_prefix}/%{_lib}/nginx/modules/ngx_http_auth_pam_module.
 %setup -n ngx_http_auth_pam_module-%{version}
 # extract nginx next to ngx_http_auth_pam_module
 %setup -T -b 2 -n nginx-%{nginx_version}
-%patch0 -p 0
+%patch -P 0 -p 0
 
 %build
 export DESTDIR=%{buildroot}
