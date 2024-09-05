@@ -51,7 +51,7 @@ BuildRequires:  zlib-devel
 BuildRequires:  pam-devel
 BuildRequires:  gpg
 
-Requires:       nginx = 2:%{nginx_version}-1
+Requires:       nginx = 2:%{nginx_version}
 
 %description
 HTTP Basic Authentication using PAM.
