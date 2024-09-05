@@ -17,7 +17,6 @@
 
 Name:           nginx-mod-http-auth-pam
 Version:        1.5.5
-Epoch:          2
 Release:        2%{?dist}
 Summary:        Nginx module to use PAM for simple http authentication
 License:        ASL 2.0
@@ -52,7 +51,7 @@ BuildRequires:  zlib-devel
 BuildRequires:  pam-devel
 BuildRequires:  gpg
 
-Requires:       nginx = %{Epoch}:%{nginx_version}
+Requires:       nginx = %{nginx_version}
 
 %description
 HTTP Basic Authentication using PAM.
