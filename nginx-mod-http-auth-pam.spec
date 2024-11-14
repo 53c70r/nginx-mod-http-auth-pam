@@ -70,7 +70,7 @@ sed -i "s#MODULE_PATH#%{_prefix}/%{_lib}/nginx/modules/ngx_http_auth_pam_module.
 
 %build
 export DESTDIR=%{buildroot}
-./configure %(nginx -V 2>&1 | grep 'configure arguments' | sed -r 's@^[^:]+: @@') --add-dynamic-module="../ngx_http_auth_pam_module-%{version}"
+./configure %(nginx -V 2>&1 | grep 'configure arguments' | sed -r 's@^[^:]+: @@' | sed 's@--without-engine @@') --add-dynamic-module="../ngx_http_auth_pam_module-%{version}"
 make modules %{?_smp_mflags}
 
 %install
