@@ -17,7 +17,7 @@
 
 Name:           nginx-mod-http-auth-pam
 Version:        1.5.5
-Release:        1%{?dist}
+Release:        5%{?dist}
 Summary:        Nginx module to use PAM for simple http authentication
 License:        ASL 2.0
 URL:            https://github.com/sto/ngx_http_auth_pam_module
